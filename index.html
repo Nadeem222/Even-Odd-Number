@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="main">
+        <h1>Even Or Odd Number</h1>
+    <form onSubmit="return false">
+        num1 <input type="text" id="num1" required>
+        <br>
+        
+        <button type="submit" onClick="doModulus();">Modulus</button>
+
+
+    </form>
+    <h3 id="result"></h3>
+    <h2> If your answer is 0 the number is even & if your answer is 1 the number is odd</h2>
+</div>
+
+    <Script>
+        function doModulus() {
+        
+
+            let num1 = document.querySelector("#num1").value;
+
+            num1 = Number(num1)
+
+            console.log("num1: " , num1)
+
+            let result = num1 % 2;
+
+            console.log("result: " , result);
+            document.querySelector("#result").innerHTML= "Result: " + result;       
+         }
+
+
+        </Script>
+        
+
+    
+</body>
+</html>
